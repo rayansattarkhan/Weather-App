@@ -1,2 +1,10 @@
 # Weather-App
-A simple weather app with Python, Flask and bootstrap.
+A simple web-based weather application.
+
+## Technologies
++ Python
++ Flask
++ Bootstrap 4.3
+
+## Author
+Rayan Sattar Khan, 2024
