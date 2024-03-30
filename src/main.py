@@ -5,7 +5,9 @@ def main():
 
 	if debug == True:
 		app.run(
-			debug=True
+			debug=True,
+			host="0.0.0.0",
+			port=5000
 		)
 	elif debug == False:
 		app.run()

@@ -1,4 +1,4 @@
-body, p{
+body{
 	background-color: #222831 !important;
 	color: #EEEEEE !important;
 }
@@ -6,3 +6,19 @@ body, p{
 .my_h1{
 	color: #8CCFD3 !important;
 }
+
+footer{
+	text-align: center;
+	background-color: #212529;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	color: #b4b4b4
+}
+
+.my_content{
+	background-color: #2d323c;
+}
+
+/* .footer_hr{
+	color: #EEEEEE;
+} */
