@@ -1,23 +1,8 @@
 {% extends 'template.html' %}
 
 {% block body %}
-	<div class="container">
-		<div class="row">
-			<div class="col"></div>
-			<div class="my_content"> <!-- My container -->
-				<div class="col-8">
-					{% if title == "Homepage" %}
-					<h1 class="my_h1">Hello World...!</h1>
-					<p class="my_content">Welcome to the Homepage of the Weather App.</p>
-					{% endif %}
-
-					{% if title == "Settings" %}
-					<h1 class="my_h1">The settings page.</h1>
-					<p class="my_content">This is the Settings page of the Weather app, where you can customize your settings for the application.</p>
-					{% endif %}
-				</div>
-			</div>
-			<div class="col"></div>
-		</div>
-	</div>
+	<h1 class="my_h1">Hello World...!</h1>
+	<p class="my_content">
+		Welcome to the Homepage of the Weather App.
+	</p>
 {% endblock body %}

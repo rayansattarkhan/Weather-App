@@ -1,0 +1,51 @@
+{% extends 'template.html' %}
+
+{% block body %}
+	<form action="/settings" method="POST">
+		<p>
+			<legend>Select your location</legend>
+			<div class="row">
+				<div class="col">
+					<label for="country" style="text-align: left !important;"><b>Country:</b></label>
+					<select class="form-select" name="country" id="country">
+						<option value="pakistan">Pakistan</option>
+					</select>
+				</div>
+				<div class="col">
+					<label for="state" style="text-align: left !important;"><b>State:</b></label>
+					<select class="form-select" name="state" id="state">
+						<option value="islamabad">Islamabad Capital Territory</option>
+						<option value="kpk">Kheyber Pukhtunkhwa</option>
+						<option value="bal">Balochistan</option>
+						<option value="sin">Sindh</option>
+						<option value="pun">Punjab</option>
+					</select>
+				</div>
+				<div class="col">
+					<label for="city" style="text-align: left !important;"><b>City:</b></label>
+					<select class="form-select" name="city" id="city">
+						<option value="islamabad">Islamabad</option>
+						<option value="karachi">Karachi</option>
+					</select>
+				</div>
+			</div>
+		</p>
+
+		<hr>
+		
+		<fieldset>
+			<legend>Which Weather Station to Get Data from?</legend>
+			<p>
+				<b>Stations: </b> 
+				<input type="radio" name="weather_station" id="openweather" value="owm" checked>
+				<label for="openweather">OpenWeather</label>
+
+				<input type="radio" name="weather_station" id="accuweather" value="aw">
+				<label for="accuweather">AccuWeather</label>
+			</p>
+		</fieldset>
+		<button class="btn btn-danger" type="submit" style="margin-bottom: 10px;">
+			Save
+		</button>
+	</form>
+{% endblock body %}

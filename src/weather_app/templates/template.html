@@ -16,8 +16,10 @@
 	<body>
 		<!-- Header -->
 		<header>
+			<!-- Navbar -->
 			<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
 				<div class="container-fluid">
+					<!-- Logged In -->
 					{% if login == True %}
 						<a class="navbar-brand" href="/home">
 							<img src="{{ url_for('static', filename='images/logo_medium.png') }}" alt="Weather App Icon" height="40px" width="40px">
@@ -43,6 +45,7 @@
 						</div>
 					{% endif %}
 
+					<!-- Logged Out -->
 					{% if login == False %}
 						<a class="navbar-brand" href="/home">
 							<img src="{{ url_for('static', filename='images/logo_medium.png') }}" alt="Weather App Icon" height="40px" width="40px">
@@ -69,13 +72,35 @@
 		</header>
 
 		<!-- Body -->
-		{% block body %}{% endblock body %}
-
+		<div class="container">
+			<div class="row">
+				<div class="col"></div>
+				<!-- My container -->
+				<div class="my_content"> 
+					<!-- Middle Column -->
+					<div class="col">
+						{% block body %}{% endblock body %}
+					</div>
+				</div>
+				<!--  -->
+				<div class="col"><p></p></div>
+			</div>
+		</div>
+		
 		<!-- Footer -->
-		<hr>
-		<footer>
+		<footer class="footer fixed-bottom bg-dark">
 			Rayan Sattar Khan (GPL-3.0), 2024 <br>
-			<b>Data source:</b> <a href="https://www.accuweather.com/" target="_blank">AccWeather.com</a>
+			<b>Data source:</b>
+			{% if ws == "aw" %}
+				<a href="https://www.accuweather.com/" target="_blank">
+					AccWeather
+				</a>
+			{% endif %}
+			{% if ws == "owm" %}
+				<a href="https://openweathermap.org/" target="_blank">
+					OpenWeather
+				</a>
+			{% endif %}
 		</footer>
 
 		<!-- JavaScript for Bootstrap -->

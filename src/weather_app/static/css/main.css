@@ -1,4 +1,5 @@
 body{
+	text-align: center;
 	background-color: #222831 !important;
 	color: #EEEEEE !important;
 }
@@ -9,16 +10,20 @@ body{
 
 footer{
 	text-align: center;
-	background-color: #212529;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	color: #b4b4b4
+	color: #b4b4b4;
+	padding-top: 32px;
+  	padding-bottom: 32px;
 }
 
 .my_content{
 	background-color: #2d323c;
 }
 
+.h1_error{
+	color: #cc2626;
+}
 /* .footer_hr{
 	color: #EEEEEE;
 } */
